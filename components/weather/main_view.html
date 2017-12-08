@@ -1,0 +1,29 @@
+<div>
+	{{errorlocation}}
+	<div>
+		Here we will display the City
+		<p>{{city}} </p>
+	</div>
+	<hr>
+	<div>
+		Here we will display current weather
+		<p>{{currentTime | date : "EEEE dd MMMM y HH:mm"}}</p>
+		<p>{{icon}}</p>
+		<p>{{currentTemperature | number : 0 }} ( Min {{daily.temperatureMin | number : 0 }} - Max {{daily.temperatureMax | number : 0 }})</p>
+		<p>Sunrise : {{daily.sunriseTime*1000 | date : "HH:mm" }} | Sunset : {{daily.sunsetTime*1000 | date : "HH:mm" }}</p>
+				<!-- 
+				//we need to multiply by 1000 the timestamp as JavaScript 
+				//counts in milliseconds since epoch (which is 01/01/1970), not seconds :
+				//ex var t = new Date (response.data.hourly.data[h].time*1000); -->
+		<p>{{sentence}}</p>
+	</div>
+	<div class="menu">
+			<nav>
+			<ul>
+				<li><a ui-sref="nextHoursWeather">Weather for the next 24 hours</a></li>
+				<li><a ui-sref="nextDaysWeather">Weather for the comings days</a></li>
+				<li><a title="TFahrenheit">In Fahrenheit</a></li>
+			</ul>
+			</nav>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Weather app</title>
+		<meta charset="utf-8">
+	</head>
+	<body ng-app="weatherApp">
+		<div ng-controller="appController">
+		<weather></weather>
+		<ui-view></ui-view>
+		</div>
+		<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="config.js"></script>
+		<script type="text/javascript" src="app_controller.js"></script>
+		<script type="text/javascript" src="components/weather/weather_component.js"></script>
+
+		
+	</body>
+	</html>

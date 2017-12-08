@@ -1,0 +1,19 @@
+<div>
+	
+<div>
+	Here we will display the weather for the next days
+
+	<div>
+			<ul>
+				<li ng-repeat="dailyWeather in allDailyWeather | limitTo : 7 : 1">
+					<!--use of filter limiTo 7 display and start by index 1-->
+				{{dailyWeather.time*1000 | date : "EEEE dd MMMM y"}} | {{dailyWeather.summary}} | {{hourlyWeather.icon}} | 
+				Min {{dailyWeather.temperatureMin | number : 0 | tempSystem : system}} - Max {{dailyWeather.temperatureMax | number : 0 | tempSystem : system}} | Humidity : {{dailyWeather.humidity*100 | number : 0}} % | Precipitation probability : {{dailyWeather.precipProbability*100 | number : 0}} % | Wind : {{dailyWeather.windBearing | number : 0}}
+				</li>
+			</ul>
+	</div>
+
+
+</div>
+<hr>
+</div>

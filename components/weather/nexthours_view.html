@@ -1,0 +1,16 @@
+<div>
+	
+<div>
+	Here we will display the weather for the next 24 hours
+
+		<div>
+			<ul>
+				<li ng-repeat="hourlyWeather in allHourlyWeather | limitTo : 24">
+				{{hourlyWeather.time*1000 | date : "EEEE dd MMMM y HH:mm"}} | {{hourlyWeather.summary}} | {{hourlyWeather.icon}} | {{hourlyWeather.temperature | number : 0 }} | Humidity : {{hourlyWeather.humidity*100 | number : 0}} % | Precipitation probability : {{hourlyWeather.precipProbability*100 | number : 0}} % | Wind : {{hourlyWeather.windBearing | number : 0}}
+				</li>
+			</ul>
+		</div>
+
+</div>
+<hr>
+</div>
